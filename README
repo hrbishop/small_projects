@@ -1,0 +1,24 @@
+FractionalArithmetic
+
+FractionalArithmetic was written to support woodworking when using fractional inches and not millimeters.
+There is a smallest unit of fractional arithmetic that woodworkers are used to working with, in my case
+it is 1/32".  If I make my default base 32, then all computations requiring a final result to be reported
+as a nearest fraction will result in a dimension of 1/32" or greater.  So when I set up a machine to conduct
+an operation I know the accuracy I should be dialing in.
+
+The fractional arithmetic basis for numerical calculation was carried forward into
+a woodworking graphics module for displaying designs and options for a project.
+Fractional arithmetic provides a new class of number called MF for MixedFraction.
+
+
+Although Google Sketchup provides a marvelous graphics tool it requires a learning curve 
+and doing it their way.  In my case I wanted a graphics tool that was able to follow
+the design as I think of building it.  So part A connects to part B at the lower right corner is
+more intuitive in my case than mousing around.  I have used Drawingboard by Ashlum for some years
+and found it practical but difficult to setup and change once a drawing scale is established.
+I wanted a drawing program that figures out the correct scale and allows a text based
+input of dimensions and connections instead of a GUI requiring mouse clicks at a precise location.
+
+I selected RMagick as the graphics support for my Ruby modules. I think RMagick provides
+excellent and reliable utilities to interact with Imagemagick and is relatively fast when
+rendering a project.
