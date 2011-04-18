@@ -6,19 +6,21 @@ it is 1/32".  If I make my default base 32, then all computations requiring a fi
 as a nearest fraction will result in a dimension of 1/32" or greater.  So when I set up a machine to conduct
 an operation I know the accuracy I should be dialing in.
 
-The fractional arithmetic basis for numerical calculation was carried forward into
-a woodworking graphics module for displaying designs and options for a project.
-Fractional arithmetic provides a new class of number called MF for MixedFraction.
+The FractionalArithmetic module uses the "rational" implementation in Ruby core.  However, the FractionalArithmetic
+extends the numeric value by taking in  a string and converting it to a MixedFraction (MF) value.
+MF can be added, subtracted, multiplied and divided by another MF value or a numeric value.
+Additionally, the base can be exchanged to a new base for an MF value.  An MF value
+can be printed out or converted to a string where the fractional display is available to the user.
 
+Lastly a decimal value can be converted to an MF value or an MF value convert to a float with to_f.
 
-Although Google Sketchup provides a marvelous graphics tool it requires a learning curve 
-and doing it their way.  In my case I wanted a graphics tool that was able to follow
-the design as I think of building it.  So part A connects to part B at the lower right corner is
-more intuitive in my case than mousing around.  I have used Drawingboard by Ashlum for some years
-and found it practical but difficult to setup and change once a drawing scale is established.
-I wanted a drawing program that figures out the correct scale and allows a text based
-input of dimensions and connections instead of a GUI requiring mouse clicks at a precise location.
+LWD is a class provided for Length, Width and Depth joining of rectangular shapes.  This class provides
+the basis for solid modeling.  A class instance is able to form the union or intersection of two rectangular
+solids based on the common dimensions.  So a rectangular solid with LWD and a second solid the length, width
+and depth dimensions are taken as common to both.  Lastly, a tally method provides a summary of all dimensions
+and finds commonality in face views to report the total having the same dimensions.
 
-I selected RMagick as the graphics support for my Ruby modules. I think RMagick provides
-excellent and reliable utilities to interact with Imagemagick and is relatively fast when
-rendering a project.
+fractionalArithmetic_spec demonstrates the use of the module methods and expected results.
+
+Harry Bishop
+hrbishop@pmsi-va.com
