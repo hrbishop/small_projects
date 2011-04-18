@@ -21,6 +21,3 @@ and depth dimensions are taken as common to both.  Lastly, a tally method provid
 and finds commonality in face views to report the total having the same dimensions.
 
 fractionalArithmetic_spec demonstrates the use of the module methods and expected results.
-
-Harry Bishop
-hrbishop@pmsi-va.com
