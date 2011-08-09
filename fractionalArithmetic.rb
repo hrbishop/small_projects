@@ -91,6 +91,9 @@ class MF < Struct.new(:whole, :fracNum, :fracDen) do
     newF = MF.commonDen(self) - MF.commonDen(other)
     MF.new(*deconstruct(newF))
   end # -
+  def -@
+    MF.new(-self.whole, -self.fracNum, self.fracDen)
+  end # -@
   def *(other)
     result = case other
     when MF

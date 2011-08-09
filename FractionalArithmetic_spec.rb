@@ -16,6 +16,11 @@ describe MF do
 
 #   (bp + 44).output
  end
+ it "should be able to take a negative value and convert it to a MF" do
+   MF.new(0, -1, 32).should eql(MF.convertStr("-1/32"))
+   (-MF.new(0, 1, 32)).should eql(MF.convertStr("-1/32"))
+   puts -MF.new(0, 1, 32)
+ end
 
  it "can convert a mixed fraction string to MF" do
    MF.convertStr("34").should eql(MF.new(34, 0,1))
